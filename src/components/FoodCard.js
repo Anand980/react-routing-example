@@ -11,16 +11,18 @@ const FoodCard = ({ item, favoritesList, setfavoritesList }) => {
 
   return (
     <div>
-      <p className="text-sm text-gray-600 line-clamp-2">{item.description}</p>
-
-      <div className="flex items-center justify-between pt-2">
-        <span className="text-lg font-bold">₹{item.price}</span>
-
-        {!isFavorite && (
+      <span className="text-lg font-bold">{item.name}</span>
+      <span className="text-lg font-bold">₹{item.price}</span>
+      {!isFavorite && (
           <button onClick={handleAdd} className="rounded-xl px-4">
             Add
           </button>
         )}
+      <p className="text-sm text-gray-600 line-clamp-2">{item.description}</p>
+
+      <div className="flex items-center justify-between pt-2">
+        
+
       </div>
     </div>
   );
